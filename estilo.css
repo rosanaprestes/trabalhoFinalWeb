@@ -1,0 +1,66 @@
+.logo img{
+    max-width: 70%;
+    padding-left: 500px;
+    padding-right: 50px;
+  }
+  button {
+    background-color: #4592af;
+    color: #33313b;
+    text-shadow: 2px 2px 8px #0f0505, -2px -2px 8px #f6f5f5, 02px 2px 8px #f6f5f5,
+      2px -2px 8px #0c0606;
+    font-family: "Rye", cursive;
+    border-radius: 10px;
+    cursor: pointer;
+    outline: none;
+    border: none;
+    box-shadow: 0 0 8px #4592af;
+  }
+  
+  button:hover {
+    background-color: #295869;
+  }
+  .title button {
+    padding: 30px;
+    margin: 500px;
+    margin-left:600px ;
+    margin-top: auto;
+    font-size: 25px;
+  } 
+  
+  .play button {
+    padding: 30px;
+    margin: 15px;
+    font-size: 15px;
+  }
+.scoreboard{
+  padding: 10px;
+}
+
+  
+.margin-top-305 {
+    margin-top: 305px;
+}
+
+.margin-top-225 {
+    margin-top: 225px;
+}
+
+.margin-top-155 {
+    margin-top: 155px;
+}
+
+.margin-left-265 {
+    margin-left: 265px;
+}
+
+.margin-left-960 {
+    margin-left: 960px;
+}
+
+.font-size-150 {
+    font-size: 150px;
+}
+
+.cursor-pointer {
+    cursor: pointer;
+}

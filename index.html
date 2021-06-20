@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <link rel="stylesheet" href="estilo.css">
+    <title>Quiz</title>
+</head>
+<body class="bg-white">
+    <div class="logo">
+    <img src="img/quiz.jpg">
+    </div>
+    <div class="title">
+        <button type="button" class="play">Inicio</button>
+    </div>
+
+    <div class="final-game-message d-none w-25 bg-white m-auto p-1 shadow rounded">
+        <div class="final-message-area d-flex w-100 m-auto">
+            <div class="final-messagem-content d-flex flex-column m-auto align-items-center">
+                <div class="final-message-header m-auto">    
+                </div>
+                <div class="final-message-body m-auto">
+                    
+                </div>
+                <div class="final-message-user-sb m-auto border-bottom">
+                    <div class="total-score text-dark fs-5 dw-bold p-2"></div>
+                    <div class="selected-category text-dark fs-5 dw-bold p-2"></div>
+                    <div class="selected-difficulty  text-dark fs-5 dw-bold p-2"></div>
+                </div>
+                <div class="final-message-button m-auto p-2">
+                    <button type="button" class="btn btn-primary">Reiniciar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="difficulty w-100 d-none flex-column margin-top-200 justify-content-center align-items-center">   
+        <h1 class="h1 text-dark">Selecione uma dificuldade e uma categoria</h1>
+        <div class="d-flex flex-row bg-light align-items-center justify-content-center shadow rounded w-50 p-2">
+            <div class="diff d-flex flex-row w-100">
+                <div class="form-check d-flex flex-row w-25 m-auto align-items-center justify-content-center">
+                    <input class="btn-check" type="radio" name="diffRadio" id="easy" value="easy">
+                    <label class="btn btn-primary d-flex m-auto align-items-center justify-content-center" for="easy">
+                        Fácil
+                    </label>     
+                </div>
+                <div class="form-check d-flex flex-row w-25 m-auto align-items-center justify-content-center">
+                    <input class="btn-check" type="radio" name="diffRadio" id="medium" value="medium">
+                    <label class="btn btn-primary d-flex m-auto align-items-center justify-content-center" for="medium">
+                        Médio
+                    </label>
+                </div>
+                <div class="form-check d-flex flex-row w-25 m-auto align-items-center justify-content-center">
+                    <input class="btn-check" type="radio" name="diffRadio" id="hard" value="hard">
+                    <label class="btn btn-primary d-flex m-auto align-items-center justify-content-center" for="hard">
+                        Difícil
+                    </label>
+                </div>
+            </div>
+            <div class="categ d-flex flex-column dropdown w-100 m-auto align-items-center justify-content-center">
+                <select value="" class="lista w-100 cursor-pointer d-flex m-auto align-items-center justify-content-center 
+               -menu-white"multiple aria-label="multiple select example"></select>
+                    <option value="0" class="text-secondary" selected>Selecionar Categoria</option>
+                </select>
+            </div>
+            <div class="start d-flex m-auto align-items-center justify-content-center">
+                <button value="start" type="button" class="btn shadow m-3 btn-primary">Começar</button>
+            </div>
+        </div>
+        <div class="saida">
+        </div>
+    </div>
+
+    <div class="game d-none flex-column w-50 m-auto align-items-center justify-content-center">
+        <div class="d-flex w-100 flex-column bg-white align-items-center justify-content-center rounded shadow">
+            <div class="d-flex m-auto flex-column align-items-center justify-content-center">
+                <div class="d-flex m-1 font-size-15 p-2 fw-bold text-dark border-bottom"></div>
+                <div class="d-flex game-category fw-bold fs-1 p-2 text-lowcase"></div>
+                <div class="d-flex game-question fw-bold fs-3 p-3"></div>
+            </div>
+            <div class="quiz-answers d-flex flex-column m-auto p-3 align-items-center justify-content-center">
+                <div class="d-flex flex-row p-2 align-items-center m-auto">
+                    <input class="form-check-input" type="radio" name="ansRadio" id="game-answer-1">
+                    <label class="quiz-answer-1 form-check-label cursor-pointer d-flex ms-3 align-items-center" for="quiz-answer-1">
+                        
+                    </label>
+                </div>
+                <div class="d-flex flex-row p-2 align-items-center m-auto">
+                    <input class="form-check-input" type="radio" name="ansRadio" id="game-answer-2">
+                    <label class="quiz-answer-2 form-check-label cursor-pointer d-flex ms-3 align-items-center" for="quiz-answer-2">
+                        
+                    </label>
+                </div>
+                <div class="d-flex flex-row p-2 align-items-center m-auto">
+                    <input class="form-check-input" type="radio" name="ansRadio" id="game-answer-3">
+                    <label class="quiz-answer-3 form-check-label cursor-pointer d-flex ms-3 align-items-center" for="quiz-answer-3">
+                        
+                    </label>
+                </div>
+                <div class="d-flex flex-row p-2 align-items-center m-auto">
+                    <input class="form-check-input" type="radio" name="ansRadio" id="game-answer-4">
+                    <label class="quiz-answer-4 form-check-label cursor-pointer d-flex ms-3 align-items-center" for="quiz-answer-4">    
+                    </label>
+                </div>
+                <div class="d-flex flex-row align-items-center m-auto game-buttons-answers">
+                    <button class="btn-back btn shadow m-3 btn-primary fw-bolder" value="confirm" type="button" >Terminar Jogo</button>
+                    <button class="btn-confirm-answer btn shadow m-3 btn-success fw-bolder" value="confirm" type="button" >Responder</button>    
+                </div>
+            </div>
+        </div>
+        <br>
+         <div class="scoreboard">
+            <div class="infos-scoreboard ">
+              <div class="score-area">
+                     <div class="var-score-area"></div>
+                </div>
+                <div class="chances-area">
+                    <div class="var-chances-area "></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+    <script src="quizz.js"></script>
+</body>
+</html>
